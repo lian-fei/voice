@@ -1,6 +1,6 @@
 # voice
 
-> A Vue.js project
+> 语音识别，语音转化为文本
 
 ## Build Setup
 
