@@ -51,7 +51,7 @@ export default {
           if (!this.finalleMessage) {
             this.finalleMessage += data
           } else {
-            this.finalleMessage += ',' + data
+            this.finalleMessage += '，' + data
           }
           this.voicebox.close()
         }
