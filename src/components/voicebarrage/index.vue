@@ -143,7 +143,6 @@ export default {
 
       this.recorder.on('onInvalid', data => {
         // alert('当AI返回无效值的时候触发')
-        this.recorder.close()
         this.$emit('onInvalid')
         console.log('当AI返回无效值的时候触发')
       })

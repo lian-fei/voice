@@ -64,6 +64,7 @@ export default {
       })
 
       this.voicebox.$on('onInvalid', () => {
+        this.voicebox.close()
         this.isStart = false
         if (!this.finalleMessage) {
           this.finalleMessage += this.middleMessage
