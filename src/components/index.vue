@@ -75,7 +75,7 @@ export default {
   right:0;
   top:0;
   bottom:0;
-  background: url(../assets/bj.jpg) no-repeat center;
+  background: url(../assets/bj.jpeg) no-repeat center;
   .typelist{
     text-align: center;
     padding:20px;
