@@ -3,7 +3,7 @@
     <div class="typelist">
       <RadioGroup v-model="language">
         <Radio label="false">Chinese</Radio>
-        <Radio label="true">Englist</Radio>
+        <Radio label="true">English</Radio>
       </RadioGroup>
     </div>
     <textarea v-model="finalleMessage" placeholder="最终录音显示内容，请尽情的施展你的才华......" ></textarea>
@@ -48,7 +48,11 @@ export default {
         this.middleMessage = data
         if (type) {
           this.isStart = false
-          this.finalleMessage += data
+          if (!this.finalleMessage) {
+            this.finalleMessage += data
+          } else {
+            this.finalleMessage += ',' + data
+          }
           this.voicebox.close()
         }
         console.log('成功发送的回调,接收到的消息', data)
