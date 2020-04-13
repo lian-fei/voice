@@ -62,6 +62,16 @@ export default {
         this.isStart = false
         console.log('检查麦克风是否可用...')
       })
+
+      this.voicebox.$on('onInvalid', () => {
+        this.isStart = false
+        if (!this.finalleMessage) {
+          this.finalleMessage += this.middleMessage
+        } else {
+          this.finalleMessage += '，' + this.middleMessage
+        }
+        console.log('检查麦克风是否可用...')
+      })
     }
   }
 }
