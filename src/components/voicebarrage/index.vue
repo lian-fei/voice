@@ -48,11 +48,6 @@ export default {
       this.stringTotalLength = this.isEnglist ? 80 : 50
       this.params = params
       this.initVoice()
-        .then(() => {
-          if (this.microphone) {
-            this.recorder.start()
-          }
-        })
     },
     /**
      * @name close
@@ -107,6 +102,7 @@ export default {
         pid: this.params.pid || '1103113'
       })
       await this.recorder.init()
+      this.recorder.start()
 
       this.recorder.on('onResult', data => {
         console.log(
